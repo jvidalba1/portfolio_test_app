@@ -12,5 +12,5 @@
 #
 
 class User < ActiveRecord::Base
-  
+  mount_uploader :profile_image, ProfileUploader
 end

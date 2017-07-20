@@ -42,7 +42,7 @@
     <div class="col-md-6">
       <div class="form-group">  
         <%= f.label :profile_image %>
-        <%= f.text_field :profile_image, class: "form-control" %>
+        <%= f.file_field :profile_image, class: "form-control", multipart: true %>
       </div>
     </div>
   </div>

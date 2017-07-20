@@ -23,7 +23,9 @@
           <% @users.each do |user| %>
             <tr>
               <td><%= user.id %></td>
-              <td><%= user.profile_image %></td>
+              <td>
+                <%= image_tag user.profile_image.small_thumb.url, class: "img-circle" %>
+              </td>
               <td><%= user.name %></td>
               <td><%= user.description[0, 25] + "..." %></td>
               <td>
