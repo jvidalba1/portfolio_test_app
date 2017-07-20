@@ -1,0 +1,45 @@
+<div class="row">
+  <div>
+    <% if @users.empty? %>
+      <h3>There are no users currently</h3>
+      <%= link_to "Create user", new_user_path, class: "btn btn-lg btn-default" %>
+    <% else %>
+      <span>
+        <h3 style="float: left">Users list</h3>      
+        <%= link_to "Create user", new_user_path, class: "btn btn-lg btn-default", style: "float: right" %>  
+      </span>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#id</th>
+            <th>Image Profile</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Twitter Account</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= user.profile_image %></td>
+              <td><%= user.name %></td>
+              <td><%= user.description[0, 25] + "..." %></td>
+              <td>
+                <%= link_to "@#{user.twitter_account}", "https://twitter.com/#{user.twitter_account}", target: "blank" %>
+              </td>
+              <td>
+                <div class="btn-group btn-group-sm" role="group">
+                  <%= link_to "Profile", user, class: "btn btn-default" %>
+                  <%= link_to "Edit", edit_user_path(user), class: "btn btn-default" %>
+                  <%= link_to "Delete", user, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>
