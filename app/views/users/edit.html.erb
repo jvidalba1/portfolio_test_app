@@ -1,6 +1,18 @@
-<h1>Editing user</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1>Editing user</h1>
 
-<%= render 'form', example: @user %>
+          <%= render 'form', example: @user %>
 
-<%= link_to 'Profile', @user %> |
-<%= link_to 'Back', users_path %>
+          <div style="text-align: right">
+            <%= link_to 'Profile', @user %> |
+            <%= link_to 'Back', users_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

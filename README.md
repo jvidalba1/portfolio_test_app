@@ -1,3 +1,5 @@
+Figaro configuration with env vars
+
 Note: You must have Imagemagick and MiniMagick installed to do image resizing. MiniMagick is a Ruby interface for Imagemagick which is a C program. This is why MiniMagick fails on 'bundle install' without Imagemagick installed.
 
 # README

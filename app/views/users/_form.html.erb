@@ -1,7 +1,7 @@
-<%= form_for(@user) do |f| %>
+<%= form_for(user) do |f| %>
   <div class="row">
     <div class="col-md-12">
-      <% if @user.errors.any? %>
+      <% if user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="form-group">  
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
@@ -23,7 +23,7 @@
     </div>  
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="form-group">  
         <%= f.label :description %>
         <%= f.text_area :description, class: "form-control", placeholder: "Description", size: "10x5"%>

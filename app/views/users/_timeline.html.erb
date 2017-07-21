@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span class="panel-title"><%= @user.short_name + "'s Timeline"%></span>
+      </div>
+      <div class="panel-body">
+        <div class="timeline-div">
+          <% if user.timeline.class == "String" %>
+            <% user.timeline.each do |tweet| %>
+              <table class="timeline-table">
+                <tr>
+                  <td rowspan="2"><%= image_tag tweet.user.profile_image_url, class: "img-rounded" %></td>
+                  <td>
+                    <h5><b><%= tweet.user.name %></b></h5>
+                    <h6><%= tweet.full_text %></h6>
+                  </td>
+                </tr>
+              </table>
+            <% end %>
+          <% else %>
+          <h4><%= user.timeline %></h4>
+          <% end %>
+          <%= link_to "Go to Account >", "https://twitter.com/#{user.twitter_account}" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
