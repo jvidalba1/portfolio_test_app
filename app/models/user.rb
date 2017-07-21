@@ -11,12 +11,10 @@
 #  updated_at      :datetime         not null
 #
 
-require 'twitter/tweet'
-
 class User < ActiveRecord::Base
   mount_uploader :profile_image, ProfileUploader
 
-  validates :name, :profile_image, :description, :twitter_account, presence: true
+  validates :twitter_account, presence: true
 
   validate :valid_twitter_account
 
@@ -30,6 +28,11 @@ class User < ActiveRecord::Base
     rescue Exception => e
       e.message
     end
+  end
+
+  def update_custom_image(url)
+    self.remote_profile_image_url = url
+    self.save!
   end
 
   private
