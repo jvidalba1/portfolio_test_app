@@ -1,8 +1,45 @@
-<!-- <p id="notice"><%# notice %></p>
- -->
- 
- <%= image_tag @user.profile_image.small_thumb.url %>
- <h2><%= @user.name %></h2>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-5">
+              <%= image_tag @user.profile_image.profile.url, class: "img-thumbnail"%>
+              <br></br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <span class="panel-title"><%= @user.short_name + "'s Timeline"%></span>
+                    </div>
+                    <div class="panel-body">
+                      <%= @user.timeline %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h2><%= @user.name %></h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <span class="panel-title">My Work Experience</span>
+                    </div>
+                    <div class="panel-body">
+                      <%= simple_format(@user.description) %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Index', users_path %>

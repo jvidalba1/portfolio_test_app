@@ -8,7 +8,11 @@ class ProfileUploader < CarrierWave::Uploader::Base
   # process scale: [200, 300] [width, height]
   process resize_to_fit: [800, 800]
 
-  version :thumb do
+  version :profile do 
+    process resize_to_fill: [300,300]
+  end
+
+  version :thumb, from_version: :profile do
     process resize_to_fill: [200,200]
   end
 

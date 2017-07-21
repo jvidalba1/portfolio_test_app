@@ -13,4 +13,12 @@
 
 class User < ActiveRecord::Base
   mount_uploader :profile_image, ProfileUploader
+
+  def short_name
+    name.split(" ").first
+  end
+
+  def timeline
+    "oelo"
+  end
 end
