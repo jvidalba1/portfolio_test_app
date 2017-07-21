@@ -6,7 +6,9 @@
       </div>
       <div class="panel-body">
         <div class="timeline-div">
-          <% if user.timeline.class == "String" %>
+          <% if user.timeline.class == String %>
+            <h4><%= user.timeline %></h4>
+          <% else %>
             <% user.timeline.each do |tweet| %>
               <table class="timeline-table">
                 <tr>
@@ -18,8 +20,6 @@
                 </tr>
               </table>
             <% end %>
-          <% else %>
-          <h4><%= user.timeline %></h4>
           <% end %>
           <%= link_to "Go to Account >", "https://twitter.com/#{user.twitter_account}" %>
         </div>

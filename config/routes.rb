@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
 
   scope '/zemoga_portfolio_api' do
-    get 'user_info/:id', to: "users#show"
-    put 'modify_user_info/:id', to: "users#udpate"
+    get 'user_info/:id', to: "users#show", defaults: {format: :json}
+    patch 'modify_user_info/:id', to: "users#update", defaults: {format: :json}
   end
 end
