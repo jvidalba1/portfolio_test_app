@@ -41,4 +41,5 @@ Set the following variables in application.yml
 ##### How to run the test suite
 
 > rake db:test:prepare
+
 > rspec
