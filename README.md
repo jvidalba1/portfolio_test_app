@@ -25,13 +25,17 @@ You must have Imagemagick and MiniMagick installed to do image resizing. MiniMag
 Set the following variables in application.yml
 
 > TWITTER_API_KEY: <api_key> 
+
 > TWITTER_API_SECRET: <api_secret>
+
 > TWITTER_ACCESS_TOKEN: <access_token>
+
 > TWITTER_ACCESS_TOKEN_SECRET: <access_token_secret>
 
 ##### Database configuration
 
 > rake db:create
+
 > rake db:migrate
 
 ##### How to run the test suite
