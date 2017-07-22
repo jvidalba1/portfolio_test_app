@@ -40,4 +40,6 @@ TWITTER_ACCESS_TOKEN_SECRET: <access_token_secret>
 
 * Deployment instructions
 
-* ...
+### Heroku
+
+* ....
