@@ -10,6 +10,36 @@ Things you may want to cover:
 
 > 5.0.4
 
+### Gems used
+
+##### Database
+> pg
+
+##### Render JSON API
+> active_model_serializer
+
+##### Image management
+> carrierwave
+
+> mini_magick
+
+> fog-aws (Pending)
+
+##### Twitter integration
+> twitter
+
+##### Configuration for environtment variables 
+> figaro
+
+##### Unit testing
+> database_cleaner
+
+> faker
+
+> factory_girl_rails
+
+> rspec-rails
+
 ### System dependencies
 
 ##### Carrierwave dependencies
