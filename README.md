@@ -6,6 +6,10 @@ Things you may want to cover:
 
 > 2.3.0
 
+### Rails version
+
+> 5.0.4
+
 ### System dependencies
 
 ##### Carrierwave dependencies
