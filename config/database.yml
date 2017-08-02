@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: postgresql
+  template: template0
+  host: localhost
+  encoding: unicode
+
+development:
+  <<: *defaults
+  database: portfolio_test_app_development
+
+production:
+  <<: *defaults
+  database: portfolio_test_app_production
+
+test:
+  <<: *defaults
+  database: portfolio_test_app_test
